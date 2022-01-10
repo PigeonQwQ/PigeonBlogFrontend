@@ -17,6 +17,7 @@ specifiers:
   svelte: ^3.44.0
   svelte-check: ^2.2.6
   svelte-preprocess: ^4.10.1
+  sveltekit-i18n: ^1.3.4
   tslib: ^2.3.1
   typescript: ^4.4.3
 
@@ -37,6 +38,7 @@ devDependencies:
   svelte: 3.45.0
   svelte-check: 2.2.11_04aca0a639e37b18beca52f25ad96855
   svelte-preprocess: 4.10.1_f248f1d6cde0444059c9a9510e6eca59
+  sveltekit-i18n: 1.3.4_svelte@3.45.0
   tslib: 2.3.1
   typescript: 4.5.4
 
@@ -1619,6 +1621,14 @@ packages:
   /svelte/3.45.0:
     resolution: {integrity: sha512-6AWftH2eqqKLYH1HvKpuUWe8OfjflarhegN57P/Cqwc2Rb2F5oIdDtANU/jMscyZMzG0v6nTQox0siZR9cmRVQ==}
     engines: {node: '>= 8'}
+    dev: true
+
+  /sveltekit-i18n/1.3.4_svelte@3.45.0:
+    resolution: {integrity: sha512-KJIffC0fHEkw0i4afXbQN0CW35EB6EPfQyMyi90Noxa25t7mnbrxv5aUA2MnnyHGcJzikpnNZeM9q7pXMKaNYQ==}
+    peerDependencies:
+      svelte: ^3.44.3
+    dependencies:
+      svelte: 3.45.0
     dev: true
 
   /table/6.8.0:
