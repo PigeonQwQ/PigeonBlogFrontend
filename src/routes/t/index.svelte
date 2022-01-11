@@ -5,6 +5,7 @@
 	import { onDestroy } from 'svelte';
 	import { directus } from '$lib/directus';
 	import { SnackbarContainer } from 'attractions';
+	import { browser } from '$app/env';
 
 	let name: string | undefined;
 	let startAt: number | undefined = NaN;
@@ -15,7 +16,10 @@
 	let warningBox;
 
 	const unSubscriber = page.subscribe(async ({ url }) => {
-		const id = url.searchParams.get('id');
+		let id = url.searchParams.get('id');
+		if (!id && browser) {
+			id = new URLSearchParams(window.location.search).get('id');
+		}
 		try {
 			const data = await directus.items('TimerData').readOne(id);
 			name = data?.name;
