@@ -4,6 +4,7 @@
 	import moment from 'moment-timezone';
 	import { onDestroy } from 'svelte';
 	import TimeCounterBox from './TimeCounterBox.svelte';
+	import { t } from '$lib/translations';
 
 	export let timezone = "Asia/Shanghai";
 	export let startAt = 0;
@@ -15,7 +16,7 @@
 	$: startTime = moment(startAt).tz(timezone);
 
 	let timerArray = [];
-	const units = ["天", "时", "分", "秒"];
+	const units = [$t("common.days"), $t("common.hours"), $t("common.minutes"), $t("common.seconds")];
 	const interval = setInterval(() => {
 		const now = moment().tz(timezone);
 		const duration = moment.duration(now.diff(startTime));

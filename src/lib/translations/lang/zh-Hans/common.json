@@ -2,5 +2,9 @@
   "darc": "咕咕咕",
   "page_name.about": "关于",
   "page_name.index": "首页",
-  "page_name.timer": "遇见大国宝已经"
+  "page_name.timer": "遇见大国宝已经",
+  "days": "天",
+  "hours": "时",
+  "minutes": "分",
+  "seconds": "秒"
 }
