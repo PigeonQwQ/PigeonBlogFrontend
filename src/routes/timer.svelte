@@ -1,15 +1,16 @@
 <script>
 	import { t } from '$lib/translations';
-	import { Card } from 'attractions';
+	import DateTimer from '../components/DateTimer.svelte';
 </script>
 
 <svelte:head>
-	<title>{$t("common.page_name.index")}</title>
+	<title>{$t("common.page_name.timer")}</title>
 </svelte:head>
 
 <div class='container'>
-	<div style='max-width: 800px;'>
-	</div>
+	<DateTimer startAt={1636819200000}>
+		
+	</DateTimer>
 </div>
 
 <style lang='scss'>
@@ -20,5 +21,6 @@
 		justify-content: center;
 		align-items: center;
 		height: 100vh;
+		user-select: none;
 	}
 </style>
