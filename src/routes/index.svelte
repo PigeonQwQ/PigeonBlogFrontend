@@ -54,6 +54,7 @@
 		position: relative;
 		font-weight: 200;
 		font-size: 4em;
+		user-select: none;
 	}
 
 	.ml9 .text-wrapper {
