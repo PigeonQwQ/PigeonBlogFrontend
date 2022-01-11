@@ -65,6 +65,7 @@
 		height: 50rem;
 		background-image: var(--background-img);
 		background-size: 100% 100%;
+		mix-blend-mode: overlay;
 	}
 
 	.content {
@@ -78,6 +79,7 @@
 
 	.content .text-block {
 		border: #eeeeee 1px solid;
+		border-radius: 2rem;
 		padding: 5.5rem;
 	}
 
@@ -107,6 +109,7 @@
 			width: 100vw;
 			height: 100vh;
 			background-image: var(--background-img-phone);
+			mix-blend-mode: screen;
 		}
 		.content .text-block {
 			width: 100%;

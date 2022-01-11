@@ -21,6 +21,10 @@
 		justify-content: center;
 		align-items: center;
 		height: 100vh;
-		user-select: none;
+		user-select: none;background:
+		linear-gradient(red, transparent),
+		linear-gradient(to top left, lime, transparent),
+		linear-gradient(to top right, blue, transparent);
+		background-blend-mode: screen;
 	}
 </style>
