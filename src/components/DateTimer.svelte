@@ -28,7 +28,7 @@
 
 </script>
 
-<div class='container' style='--background-img: {_background}; --background-img-phone: {_mbackground}'>
+<div class='container shadow' style='--background-img: {_background}; --background-img-phone: {_mbackground}'>
 	<Card style='
 	background-color: rgba(255, 255, 255, 0);
 	height: 100%;
@@ -44,6 +44,9 @@
 		<div class='content'>
 			<div class='text-block'>
 				{#each timerArray as t, i}
+					{#if i === 0}
+						<br/>
+					{/if}
 				<TimeCounterBox name={units[i]} data={t} />
 				{/each}
 			</div>
@@ -77,9 +80,12 @@
 		padding: 5.5rem;
 	}
 
+	.shadow {
+		box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+	}
+
 	.head {
 		display: flex;
-		align-self: flex-start;
 		align-items: center;
 		justify-content: center;
 		color: rgb(71, 173, 170);
