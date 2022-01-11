@@ -2,6 +2,7 @@
 	import { t } from '$lib/translations';
 	import { onMount } from 'svelte';
 	import anime from 'animejs';
+	import StarFlow from '../components/StarFlow.svelte';
 
 	let textElem;
 	let headerElem;
@@ -32,6 +33,7 @@
 </svelte:head>
 
 <div class='container'>
+	<StarFlow />
 	<h1 class="ml9" bind:this={headerElem}>
   	<span class="text-wrapper">
     	<span class="letter" bind:this={textElem}>Pigeon Blog</span>
@@ -70,5 +72,6 @@
 		transform-origin: 50% 100%;
 		display: inline-block;
 		line-height: 1em;
+		color: #eeeeee;
 	}
 </style>
