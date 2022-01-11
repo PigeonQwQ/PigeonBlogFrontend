@@ -10,5 +10,17 @@
 		return {};
 	};
 </script>
+<script>
+	import CookieWarning from '../components/CookieWarning.svelte';
+	import { getCookie, setCookie } from '$lib/utils/cookie';
+
+	let showCookieWarning = false;
+
+	const warnStatus = getCookie("disable-cookie-warn")
+	if (warnStatus !== 'true') showCookieWarning = true;
+</script>
 
 <slot></slot>
+{#if showCookieWarning}
+	<CookieWarning onClose={() => {showCookieWarning = false; setCookie("disable-cookie-warn", "true")}} />
+{/if}
