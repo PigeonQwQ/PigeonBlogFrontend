@@ -1,6 +1,5 @@
 <script>
 	import { t } from '$lib/translations';
-	import { Card } from 'attractions';
 </script>
 
 <svelte:head>

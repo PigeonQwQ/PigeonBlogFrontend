@@ -7,5 +7,15 @@
   "hours": "时",
   "minutes": "分",
   "seconds": "秒",
-  "network_notfound": "无法找到对象"
+  "network_notfound": "无法找到对象",
+  "cookie_warning_title": "关于Cookie的隐私配置",
+  "cookie_warning_content": "我们正在使用Cookie技术以实现某些核心功能，当您使用这些核心功能时，我们将默认您允许我们使用Cookie。",
+  "isee": "知道了",
+  "signin": "登入",
+  "email": "电子邮箱",
+  "email.help": "请输入您的电子邮箱",
+  "password": "密码",
+  "password.help": "请输入您的密码",
+  "signin.failed": "登陆失败，请检查邮箱与密码",
+  "signin.success": "登陆成功"
 }
