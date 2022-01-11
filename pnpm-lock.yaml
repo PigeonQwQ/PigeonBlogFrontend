@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@directus/sdk': ^9.4.3
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-static': ^1.0.0-next.24
   '@sveltejs/kit': next
@@ -25,9 +26,10 @@ specifiers:
   typescript: ^4.4.3
 
 devDependencies:
+  '@directus/sdk': 9.4.3
   '@sveltejs/adapter-auto': 1.0.0-next.10
   '@sveltejs/adapter-static': 1.0.0-next.24
-  '@sveltejs/kit': 1.0.0-next.218_sass@1.47.0+svelte@3.45.0
+  '@sveltejs/kit': 1.0.0-next.223_sass@1.47.0+svelte@3.45.0
   '@typescript-eslint/eslint-plugin': 4.33.0_3289a875d95a672b97ebf589745c66ef
   '@typescript-eslint/parser': 4.33.0_eslint@7.32.0+typescript@4.5.4
   attractions: 3.7.0_c8a79eef6b5dbbe16f9d21a66ded8480
@@ -68,6 +70,14 @@ packages:
       '@babel/helper-validator-identifier': 7.16.7
       chalk: 2.4.2
       js-tokens: 4.0.0
+    dev: true
+
+  /@directus/sdk/9.4.3:
+    resolution: {integrity: sha512-iV9K0fE1IkygP+4MLBlw1DTyHOaYvPswX3pVLuZ8pBMYN31PMn8iY9nLESXOcRfox5v+7+QWcLnQvTKv0Bqv9w==}
+    dependencies:
+      axios: 0.24.0
+    transitivePeerDependencies:
+      - debug
     dev: true
 
   /@eslint/eslintrc/0.4.3:
@@ -169,8 +179,8 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.218_sass@1.47.0+svelte@3.45.0:
-    resolution: {integrity: sha512-reimVgWaFq0qIvxkKnWE4nq35JFd6yQ6Lkge+o3WkX3hV8CAtrLbSAzFaEIUu5Ph09gJkl2PnqQa32WVDaeBZg==}
+  /@sveltejs/kit/1.0.0-next.223_sass@1.47.0+svelte@3.45.0:
+    resolution: {integrity: sha512-4By1NldrpMznrL3sqYCZYxRQHz+ZI2Rlhrrzp0qhaKqdbU9KLEtM7ZVxVW3r+pWk2y6uLulRpjp3NfKPOy1Xiw==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -427,6 +437,14 @@ packages:
       sass: 1.47.0
       svelte: 3.45.0
       svelte-preprocess: 4.10.1_f248f1d6cde0444059c9a9510e6eca59
+    dev: true
+
+  /axios/0.24.0:
+    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+    dependencies:
+      follow-redirects: 1.14.7
+    transitivePeerDependencies:
+      - debug
     dev: true
 
   /balanced-match/1.0.2:
@@ -952,6 +970,16 @@ packages:
 
   /flatted/3.2.4:
     resolution: {integrity: sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==}
+    dev: true
+
+  /follow-redirects/1.14.7:
+    resolution: {integrity: sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: true
 
   /fs.realpath/1.0.0:
