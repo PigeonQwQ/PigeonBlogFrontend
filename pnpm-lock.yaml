@@ -5,6 +5,7 @@ specifiers:
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-static': ^1.0.0-next.24
   '@sveltejs/kit': next
+  '@types/animejs': ^3.1.4
   '@typescript-eslint/eslint-plugin': ^4.31.1
   '@typescript-eslint/parser': ^4.31.1
   animejs: ^3.2.1
@@ -34,6 +35,7 @@ devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.10
   '@sveltejs/adapter-static': 1.0.0-next.24
   '@sveltejs/kit': 1.0.0-next.225_sass@1.47.0+svelte@3.45.0
+  '@types/animejs': 3.1.4
   '@typescript-eslint/eslint-plugin': 4.33.0_3289a875d95a672b97ebf589745c66ef
   '@typescript-eslint/parser': 4.33.0_eslint@7.32.0+typescript@4.5.4
   animejs: 3.2.1
@@ -227,6 +229,10 @@ packages:
       vite: 2.7.10_sass@1.47.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@types/animejs/3.1.4:
+    resolution: {integrity: sha512-WUjeFT2SXd6intfE6cg6eL1jk/JL88JqM2gC4WqO4iHLmbCvHUq6aoLK13lGpDWs4FtS2PHoYraJZ0dEx99Dyg==}
     dev: true
 
   /@types/json-schema/7.0.9:

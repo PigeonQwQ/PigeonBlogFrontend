@@ -16,7 +16,7 @@ export const getCookie = (name: string) => {
 	}, '')
 }
 
-export const deleteCookie = (name: string, path: string) => {
+export const deleteCookie = (name: string, path = '') => {
 	if (!browser) return '';
 
 	setCookie(name, '', -1, path)

@@ -62,7 +62,7 @@
 					<AtSignIcon size='24' class='item' />
 				</TextField>
 				<br/>
-				<TextField autofocus type='password' label={$t("common.password")} outline on:change={(value) => {passwordValue = value?.detail?.value || "";}} />
+				<TextField type='password' label={$t("common.password")} outline on:change={(value) => {passwordValue = value?.detail?.value || "";}} />
 			</div>
 
 			<Button disabled={disableSubmit} style='justify-self: flex-end;' outline on:click={login}>{$t("common.signin")}</Button>

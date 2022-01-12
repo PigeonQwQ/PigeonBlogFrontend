@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { t } from '$lib/translations';
 	import { onMount } from 'svelte';
 	import anime from 'animejs';
@@ -8,9 +8,11 @@
 	import { Button, ButtonSet } from 'carbon-components-svelte';
 	import Login16 from "carbon-icons-svelte/lib/Login16";
 	import { LetterAa16, LogoGithub16 } from 'carbon-icons-svelte';
+	import { updateUser } from '$lib/stores/identify';
 
 	let textElem;
 	let headerElem;
+	let currentUserName: string;
 
 	onMount(() => {
 		anime
@@ -29,7 +31,12 @@
 				easing: "easeOutExpo",
 				delay: 1000,
 			});
-	})
+	});
+
+	onMount(async () => {
+		const user = await updateUser();
+		currentUserName = user?.first_name;
+	});
 
 </script>
 
@@ -40,6 +47,11 @@
 <div class='container'>
 	<StarFlow />
 	<NavBar>
+		<div slot='right'>
+			{#if currentUserName}
+			<p style='color: #eeeeee'>{$t("common.welcome")}{currentUserName}</p>
+			{/if}
+		</div>
 	</NavBar>
 	<h1 class="ml9" bind:this={headerElem}>
   	<span class="text-wrapper">
@@ -47,8 +59,14 @@
   	</span>
 	</h1>
 	<ButtonSet style='justify-content: center;'>
-		<Button kind="tertiary" icon={Login16} iconDescription={$t("common.signin")} href='auth/signin'>{$t("common.signin")}</Button>
-		<Button kind='tertiary' icon={LogoGithub16} iconDescription='Github' href='https://github.com/PigeonQwQ/PigeonBlogFrontend'>Github</Button>
+		{#if currentUserName === undefined}
+			<Button kind="tertiary" icon={Login16} iconDescription={$t("common.signin")} href='auth/signin'>
+				{$t("common.signin")}
+			</Button>
+		{:else}
+			<Button kind="tertiary" icon={Login16} iconDescription={$t("common.signout")} href='auth/signout'>{$t("common.signout")}</Button>
+		{/if}
+		<Button kind='tertiary' size="field" style='width: 2.5rem;' icon={LogoGithub16} iconDescription='Github' href='https://github.com/PigeonQwQ/PigeonBlogFrontend'/>
 		<Button kind='tertiary' icon={LetterAa16} iconDescription={$t("common.articles")}>{$t("common.articles")}</Button>
 	</ButtonSet>
 </div>
