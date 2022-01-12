@@ -17,5 +17,6 @@
   "password": "密码",
   "password.help": "请输入您的密码",
   "signin.failed": "登陆失败，请检查邮箱与密码",
-  "signin.success": "登陆成功"
+  "signin.success": "登陆成功",
+  "signin.already": "已有登录状态，正在为您跳转"
 }

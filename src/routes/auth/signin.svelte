@@ -5,11 +5,19 @@
 	import { directus } from '$lib/directus';
 	import { getQueryParam } from '$lib/utils/query';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+	import { updateUser } from '$lib/stores/identify';
 
 	let emailValue = "";
 	let passwordValue = "";
 	let disableSubmit = false;
 	let warnBox;
+
+	const jumpBack = () => {
+		let fromLoc = getQueryParam("from");
+		if (fromLoc.length === 0) fromLoc = '/';
+		setTimeout(() => goto(fromLoc), 2000);
+	}
 
 	const login = async () => {
 		emailValue = emailValue.trim();
@@ -23,14 +31,20 @@
 				password: passwordValue,
 			});
 			warnBox?.showSnackbar({ props: { text: $t("common.signin.success") } });
-			let fromLoc = getQueryParam("from");
-			if (fromLoc.length === 0) fromLoc = '/';
-			setTimeout(() => goto(fromLoc), 2000);
+			jumpBack()
 		} catch (e) {
 			warnBox?.showSnackbar({ props: { text: $t("common.signin.failed") } });
 			disableSubmit = false;
 		}
 	}
+
+	onMount(async () => {
+		const user = await updateUser();
+		if (user) {
+			warnBox?.showSnackbar({ props: { text: $t("common.signin.already") } });
+			jumpBack()
+		}
+	});
 
 </script>
 

@@ -3,6 +3,10 @@
 	import { onMount } from 'svelte';
 	import anime from 'animejs';
 	import StarFlow from '../components/StarFlow.svelte';
+	import "carbon-components-svelte/css/white.css";
+	import NavBar from '../components/NavBar.svelte';
+	import { Button, ButtonSet } from 'carbon-components-svelte';
+	import Login16 from "carbon-icons-svelte/lib/Login16";
 
 	let textElem;
 	let headerElem;
@@ -34,6 +38,11 @@
 
 <div class='container'>
 	<StarFlow />
+	<NavBar>
+		<ButtonSet slot='right'>
+			<Button kind="tertiary" icon={Login16} iconDescription={$t("common.signin")} href='auth/signin' />
+		</ButtonSet>
+	</NavBar>
 	<h1 class="ml9" bind:this={headerElem}>
   	<span class="text-wrapper">
     	<span class="letter" bind:this={textElem}>Pigeon Blog</span>
@@ -45,11 +54,14 @@
 	@import "../../static/css/global.css";
 
 	.container {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 100vh;
 		width: 100vw;
+		flex-direction: column;
+		overflow-x: hidden;
 	}
 
 	.ml9 {
