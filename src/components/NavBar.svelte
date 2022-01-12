@@ -7,7 +7,7 @@
 
 <div class='container' style='--background-data: {background}; --container-position: {position};'>
 	<div style='align-self: flex-start; margin: auto 0.5rem;'><slot name='left'></slot></div>
-	<div style='align-self: flex-end; margin: auto 0.5rem;'><slot name='right'></slot></div>
+	<div style='align-self: flex-end; margin: auto 0.5rem; width: 50%;'><slot name='right'></slot></div>
 </div>
 
 <style>

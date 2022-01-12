@@ -7,6 +7,7 @@
 	import NavBar from '../components/NavBar.svelte';
 	import { Button, ButtonSet } from 'carbon-components-svelte';
 	import Login16 from "carbon-icons-svelte/lib/Login16";
+	import { LetterAa16, LogoGithub16 } from 'carbon-icons-svelte';
 
 	let textElem;
 	let headerElem;
@@ -39,15 +40,17 @@
 <div class='container'>
 	<StarFlow />
 	<NavBar>
-		<ButtonSet slot='right'>
-			<Button kind="tertiary" icon={Login16} iconDescription={$t("common.signin")} href='auth/signin' />
-		</ButtonSet>
 	</NavBar>
 	<h1 class="ml9" bind:this={headerElem}>
   	<span class="text-wrapper">
     	<span class="letter" bind:this={textElem}>Pigeon Blog</span>
   	</span>
 	</h1>
+	<ButtonSet style='justify-content: center;'>
+		<Button kind="tertiary" icon={Login16} iconDescription={$t("common.signin")} href='auth/signin'>{$t("common.signin")}</Button>
+		<Button kind='tertiary' icon={LogoGithub16} iconDescription='Github' href='https://github.com/PigeonQwQ/PigeonBlogFrontend'>Github</Button>
+		<Button kind='tertiary' icon={LetterAa16} iconDescription={$t("common.articles")}>{$t("common.articles")}</Button>
+	</ButtonSet>
 </div>
 
 <style lang='scss'>
