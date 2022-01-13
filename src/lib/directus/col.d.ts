@@ -9,7 +9,15 @@ export type TimerData = {
 	head: string | null;
 };
 
+export type SeriesList = {
+	id: UUID;
+	name: string;
+	description: string;
+	tags: string[];
+};
+
 
 export type CustomCollections = {
 	TimerData: TimerData;
+	SeriesList: SeriesList,
 };

@@ -2,7 +2,8 @@ import { BaseStorage, Directus } from '@directus/sdk';
 import type { CustomCollections } from '$lib/directus/col';
 import { deleteCookie, getCookie, setCookie } from '$lib/utils/cookie';
 
-class SessionStorage extends BaseStorage {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class CookieStorage extends BaseStorage {
 	prefix = "cms_"
 
 	get(key) {
@@ -19,3 +20,10 @@ class SessionStorage extends BaseStorage {
 }
 
 export const directus = new Directus<CustomCollections>(import.meta.env.VITE_API_BASEURL, {});
+
+export const getSeriesList = (limit = 10, page = 0) => {
+	return directus.items("SeriesList").readMany({
+		limit,
+		page,
+	})
+}

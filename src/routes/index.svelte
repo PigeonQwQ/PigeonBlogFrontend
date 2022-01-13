@@ -67,7 +67,7 @@
 			<Button kind="tertiary" icon={Login16} iconDescription={$t("common.signout")} href='auth/signout'>{$t("common.signout")}</Button>
 		{/if}
 		<Button kind='tertiary' size="field" style='width: 2.5rem;' icon={LogoGithub16} iconDescription='Github' href='https://github.com/PigeonQwQ/PigeonBlogFrontend'/>
-		<Button kind='tertiary' icon={LetterAa16} iconDescription={$t("common.articles")}>{$t("common.articles")}</Button>
+		<Button kind='tertiary' icon={LetterAa16} iconDescription={$t("common.articles")} href='s/'>{$t("common.articles")}</Button>
 	</ButtonSet>
 </div>
 

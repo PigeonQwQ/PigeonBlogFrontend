@@ -21,5 +21,6 @@
   "signin.already": "已有登录状态，正在为您跳转",
   "articles": "文章",
   "signout": "登出",
-  "welcome": "欢迎"
+  "welcome": "欢迎",
+  "series": "文章系列"
 }
