@@ -53,8 +53,6 @@
 <SnackbarContainer bind:this={warningBox} />
 
 <style lang='scss'>
-	@import "../../../static/css/global.css";
-
 	.container {
 		display: flex;
 		justify-content: center;

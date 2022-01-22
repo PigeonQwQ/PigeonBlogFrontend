@@ -72,8 +72,6 @@
 </div>
 
 <style lang='scss'>
-	@import "../../../static/css/global.css";
-
 	.container.blended-color {
 		background: repeating-linear-gradient(
 				#F3F5C4 0,

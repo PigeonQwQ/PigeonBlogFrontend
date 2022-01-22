@@ -3,11 +3,18 @@
 	import { onMount } from 'svelte';
 	import { getSeriesList } from '$lib/directus';
 	import { SkeletonText } from "carbon-components-svelte";
+	import { browser } from '$app/env';
 
 	let loading = true;
 
 	onMount(async () => {
 		console.log(await getSeriesList())
+
+		if (browser) {
+			new SkeletonText({
+				target: document.getElementById("test-div"),
+			})
+		}
 	})
 
 </script>
@@ -18,10 +25,10 @@
 
 <div class='container'>
 	<p>1231231</p>
+	<div id='test-div'></div>
 </div>
 
 <style lang='scss'>
-	@import "/static/css/global.css";
 
 	.container {
 	}

@@ -72,8 +72,6 @@
 </div>
 
 <style lang='scss'>
-	@import "../../static/css/global.css";
-
 	.container {
 		position: relative;
 		display: flex;

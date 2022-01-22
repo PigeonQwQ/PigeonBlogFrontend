@@ -24,3 +24,9 @@
 {#if showCookieWarning}
 	<CookieWarning onClose={() => {showCookieWarning = false; setCookie("disable-cookie-warn", "true")}} />
 {/if}
+
+<style lang='scss'>
+	@import "/static/css/global.css";
+	@import "carbon-components-svelte/css/all.css";
+
+</style>

@@ -22,6 +22,8 @@ export const parse = (markdown: string, options: ParseOptions = DEFAULT_OPTIONS)
 			worker.terminate();
 			reject(new Error("Worker takes too long to parse."));
 		}, options.timeout)
-		worker.postMessage(markdown)
+		worker.postMessage({
+			markdown,
+		})
 	})
 }
